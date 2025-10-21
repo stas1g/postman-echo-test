@@ -1,12 +1,15 @@
 image: Ubuntu2004
+
 stack: jdk 11
+
 branches:
   only:
     - main
+
 build: off
 
 install:
   - chmod +x gradlew
 
 build_script:
-  - ./gradlew test --info
+  - ./gradlew clean test --info --stacktrace --refresh-dependencies
