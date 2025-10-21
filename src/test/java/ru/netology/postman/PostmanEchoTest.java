@@ -20,6 +20,6 @@ class PostmanEchoTest {
         .then()
                 .statusCode(200)
                 // Проверяем, что в поле data вернулись отправленные данные
-                .body("data", equalTo("some data"));
+                .body("data", equalTo("wrong data")); // вместо "some data"
     }
 }
